@@ -1,44 +1,207 @@
 * {box-sizing:border-box}
   
   #body {
-     background-image: linear-gradient(to right,rgba(64, 95, 151, 0.8), rgba(255,0,0,0), rgba(64, 95, 151, 0.8));
+     background-image: linear-gradient(to right,rgba(0, 0, 0, 1), rgba(250,250,250,1), rgba(0, 0, 0, 1));
   }
   #content {
     border-radius: 10px;
-    border: 5px solid #73AD21;
+    border: 5px solid rgb(255, 255, 255);
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 1);
+    width: 97vw;
+    height: 97%;
+    min-height: 97vh;
+    text-align: center;
   }
 
   #subcontent {
+    max-width: 1400;
+    height: 97%;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
+    width: 94vw;
+    color:  rgba(255, 255, 255, 1);
     background-color: rgba(255, 255, 255, 0);
-  }
-
-/*github, and linkedin buttons*/
-.button {
-    background-color: rgb(33, 9, 252); /* Royal Blue */
-    border-radius: 10px;
-    border: 2px solid rgb(139, 226, 18); /* Green */
-    color: white;
-    padding: 0px 25px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
   }
-  
-  /* Slideshow container */
-  .slideshow-container {
-    max-width: 1200px;
-    width: 90%;
-    position: relative;
-    margin: auto;
+  .sunset-backdrop {
+      width:100%; 
+      height: 97%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      background-image: url("/image/backdrops/sunset.jpg"); 
   }
+    .sunsetwater-backdrop {
+        width:100%; 
+        height: 97%;
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-image: url("/image/backdrops/sunsetwater.jpg"); 
+    }
+    .city-backdrop {
+          width:100%; 
+          height: 97%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          background-image: url("/image/backdrops/city.png"); 
+    }
+    .skyline-backdrop {
+          width:100%; 
+          height: 97%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+          background-image: url("/image/backdrops/skyline.jpg"); 
+    }
+    .barge-backdrop {
+            width:100%; 
+            height: 97%;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            background-image: url("/image/backdrops/barge.jpg"); 
+    }
+      
+          #homebutton {
+            text-decoration: underline;
+            background-color: rgb(0, 0, 0,0); /* Black */
+            color: white;
+            margin: auto;
+            padding: 5% 5%;
+            text-align: center;
+            align-self: flex-start;
+            display: inline-block;
+            font-size: 73%;
+        } 
+          .listbutton {
+            text-decoration: underline;
+            background-color: rgb(0, 0, 0,0); /* Black */
+            color: white;
+            margin: auto;
+            padding: 0vw 0%;
+            text-align: center;
+            display: inline-block;
+            font-size: 93%;
+        }  
+
+        @media only screen and (max-width: 850px) {
+            .listbutton {
+            text-decoration: underline;
+            background-color: rgb(0, 0, 0,0); /* Black */
+            color: white;
+            margin: auto;
+            padding: 0vw 0%;
+            text-align: center;
+            display: inline-block;
+            font-size: 70%;
+          }  
+        }
+        @media only screen and (max-width: 650px) {
+            .listbutton {
+              background-color: rgb(0, 0, 0,0.2); /* Black */
+              color: white;
+              border: 2px solid rgb(255, 255, 255);
+              border-radius: 15px;
+              margin: auto;
+              padding: 0vw 2.5%;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 50%;
+          }  
+        }
+        .button {
+            background-color: rgb(0, 0, 0); /* Black */
+            color: white;
+            border: 2px solid rgb(255, 255, 255);
+            margin: auto;
+            padding: 0vw 2.3%;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 73%;
+        }
+/*github, and linkedin buttons*/
+
+@media only screen and (max-width: 850px) {
+    .button {
+        background-color: rgb(0, 0, 0); /* Black */
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        margin: auto;
+        padding: 0vw 2%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 56%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .button {
+        background-color: rgb(0, 0, 0); /* Black */
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        margin: auto;
+        padding: 0vw 2.3%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 48%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .button {
+        background-color: rgb(0, 0, 0); /* Black */
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        margin: auto;
+        padding: 0vw 2.1%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 6px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .button {
+        background-color: rgb(0, 0, 0); /* Black */
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        margin: auto;
+        padding: 0vw 2.2%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 4.5px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .button {
+        background-color: rgb(0, 0, 0); /* Black */
+        color: white;
+        border: 2px solid rgb(255, 255, 255);
+        margin: auto;
+        padding: 0vw 1.5%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 3.9px;
+    }
+}
+
+
   
   /* Hide the images by default */
   .mySlides {
@@ -48,8 +211,7 @@
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
-    position: absolute;
-    top: 50%;
+    position: relative;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -64,7 +226,6 @@
   /* Position the "next button" to the right */
   .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
@@ -72,17 +233,60 @@
     background-color: rgba(0,0,0,0.8);
   }
   
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 18px;
+  /* Text container */
+  .text-container {
+    position: relative;
+    margin: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 84.3%;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 1px;
-    width: 100%;
+    background-color: rgb(0, 0, 0,0.55); /* Black */
+    color: white;
+    border: 2px solid white;
     text-align: center;
   }
+  /* slide show container */
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 84.3%;
+    padding: 8px 12px;
+    background-color: rgb(0, 0, 0,0.8); /* Black */
+    color: white;
+    border: 2px solid white;
+    text-align: center;
+  }
+  /* Caption text */
+  .text {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 1px;
+    width: 90%;
+    margin-left: 5vw;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
   
+@media only screen and (max-width: 600px) {
+  /* Caption text */
+  .text {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: relative;
+    bottom: 1px;
+    width: 90%;
+    margin-left: 5vw;
+    text-align: center;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+}
+
   /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
@@ -92,7 +296,6 @@
     top: 0;
   }
   
-  /* The dots/bullets/indicators */
   .dot {
     cursor: pointer;
     height: 15px;
@@ -103,7 +306,32 @@
     display: inline-block;
     transition: background-color 0.6s ease;
   }
-  
+@media only screen and (max-width: 1000px) {
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+}
   .active, .dot:hover {
     background-color: #717171;
   }
@@ -126,3 +354,6 @@
     to {opacity: 1}
   }
   
+.list{
+  list-style-type: none;
+}
