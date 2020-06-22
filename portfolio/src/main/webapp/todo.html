@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
-  <body id="body" >
+  <body id="body" onload="includeDynamicHTML('image_handler')">
 
     <div id="content" class="skyline-backdrop">
     <div id="subcontent" >
     <div id="include-partials/navigation"></div>
+    <div class="text-container">
+        <div class="text">
             <div id="include-data"></div>
                 <div class="center">
         <h1 style="font-size:100%;"> CSV Input </h1>
@@ -17,7 +19,8 @@
             Your Submission: <input type="text" name="message" maxlength="80" required=true>
             <input type="submit">
         </form>
+        <div id="include-image_handler"></div>
     </div>
 
-    <script src="getDataFromData.js"></script>
+    <script>updateDataInclude();</script>
     
