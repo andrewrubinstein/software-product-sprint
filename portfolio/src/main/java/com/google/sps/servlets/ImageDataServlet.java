@@ -89,6 +89,7 @@ public class ImageDataServlet extends HttpServlet {
     // Get the text of the image that the user uploaded.
     String text = visionApi.getEntireText(blobUtils.getBlobBytes(imageInfo.getKey()));
     blobstoreService.delete(imageInfo.getKey());
+    //text = te.replaceAll("\\\\","\\");
     String[] messages = text.split("\\\\n");
 
     for(String message: messages)
