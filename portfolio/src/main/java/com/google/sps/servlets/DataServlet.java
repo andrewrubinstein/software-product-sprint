@@ -33,14 +33,17 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import com.andrewrs.sps.data.ListRecord;
+import com.andrewrs.sps.utils.StringUtil;
 
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
   private DatastoreService datastore;
+  private Gson gson;
   public void init()
   {
     datastore = DatastoreServiceFactory.getDatastoreService();
+    gson = new Gson();
   }
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException 
@@ -63,7 +66,6 @@ public class DataServlet extends HttpServlet {
                 (String)entity.getProperty("message") ));
     }
 
-    Gson gson = new Gson();
     response.getWriter().println(gson.toJson(records));
   }
     @Override
@@ -77,7 +79,7 @@ public class DataServlet extends HttpServlet {
     {
       Entity entity = new Entity("message_log");
       entity.setProperty("timeStamp", System.currentTimeMillis());
-      entity.setProperty("message", escapeQuotesInParameter(message));
+      entity.setProperty("message", StringUtil.escapeQuotesInParameter(message));
       datastore.put(entity);
     }
     response.sendRedirect("/todo.html");
@@ -90,22 +92,5 @@ public class DataServlet extends HttpServlet {
       return defaultValue;
     }
     return value;
-  }
-  private String escapeQuotesInParameter(String param)
-  {
-      StringBuilder data = new StringBuilder();
-      int lastIndex = 0;
-      for(int i = 0;i < param.length();i++)
-      {
-          if(param.charAt(lastIndex) == '\\' || param.charAt(i) != '\'' || param.charAt(i) != '\"')
-            data.append(param.charAt(i));
-          else
-          {
-              data.append('\\');
-              data.append(param.charAt(i));
-          }
-          lastIndex = i;
-      }
-      return data.toString();
   }
 }
